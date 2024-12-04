@@ -118,3 +118,17 @@ INFO[0104] Updated: 2024-12-04 10:08:58 Password: [  Test password  ]
 INFO[0104] Updated: 2024-12-04 10:00:40 Password: [  xPXvPuZfy70  ] 
 Enter ) 돌아가기 : 
 ```
+
+## 빠른사용 
+빠르게 사용하기 위해서는 Alias 설정 후 단축어로 사용할 수 있습니다. (Mac 기준입니다.)
+```
+% ls -al | grep .zshrc
+-rw-r--r--@  1 staff  staff         392 12  4 10:21 .zshrc
+
+% vi .zshrc
+alias passbox="/Password/PassBox_darwin_arm64 -storage=/Password/pass_storage
+
+
+% source .zshrc
+% passbox
+```
