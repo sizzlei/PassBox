@@ -4,7 +4,7 @@ Password Simple Storage
 개인 로컬에 패스워드정보를 관리하기위해 간단하게 개발된 Password Storage 툴입니다. 
 
 ## Usage 
-```
+```shell
 ./passbox -storage=./passbox
 
 +================================================+
@@ -26,7 +26,7 @@ Enter Menu Idx :
 ```
 ### Initialize
 최초 실행시 한번 진행되며, SQLITE DB 파일을 생성하고 설정합니다. 
-```
+```shell
 INFO[0000] Start PassBox                                
 INFO[0000] Passbox Storage : ./passbox
 INFO[0002] initialize PassBox Storage                   
@@ -42,7 +42,7 @@ WARN[0002] 패스워드 생성시 필요한 정보를 설정 합니다.
 ```
 ### 신규 생성
 > Passbox는 계정명을 저장하지 않습니다. 
-```
+```shell
 0 )  Create PassBox
 
 1 )  PassBox View
@@ -58,7 +58,7 @@ INFO[0159] Added Box : Service1 [   Sly4XgTJ<6w4   ]
 ```
 ### 패스워드 보기
 저장된 패스워드를 서비스 이름 별로 확인할 수 있습니다. 
-```
+```shell
 0 )  Create PassBox
 
 1 )  PassBox View
@@ -82,7 +82,7 @@ Enter Idx :
 ```
 ### 저장된 패스워드 수정
 패스워드를 변경해야할 경우 자동 완성 또는 수동으로 변경할 수 있습니다. 
-```
+```shell
 INFO[0021] Passbox [Service1] View                      
 INFO[0021] Password : [  xPXvPuZfy70  ]                
 INFO[0021] Last Updated : 2024-12-04 10:00:40           
@@ -104,7 +104,7 @@ Enter ) 돌아가기 :
 
 ### 패스워드 변경 이력 조회 
 패스워드를 변경하면 변경된 이력을 조회 할 수 있습니다. 
-```
+```shell
 0 )  Modify
 
 1 )  Delete
@@ -131,4 +131,15 @@ alias passbox="/Password/PassBox_darwin_arm64 -storage=/Password/pass_storage
 
 % source .zshrc
 % passbox
+```
+
+또는 Sh 파일을 설정하여 실행합니다. 
+./passbox.sh
+```bash
+#!/bin/bash
+
+basedir="/Users/vnyx6xr63h/Desktop/Kurly-DBA/Password/PassBox_darwin_arm64"
+storageFile="/Users/vnyx6xr63h/Desktop/Kurly-DBA/Password/pass_storage"
+
+$basedir -storage=${storageFile}
 ```
